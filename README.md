@@ -1,14 +1,15 @@
 
 # Unveiling the Unseen: A Novel Video Identification Attack on Media Multiplexing
 ### Attack process of Anya
+![image](https://github.com/user-attachments/assets/4644cceb-45d2-452e-a05f-29743ebd6943)
 
-![image](https://github.com/user-attachments/assets/3837be7c-0ef6-4170-8c8b-6d46cc800d54)
+
 
 
 #### Step1: Fingerprint Collection
 This process entails simulating client behavior and parsing segment information from webpage elements and the metadata of headers of audio and video files. The specific process is as follows:
 
-- The ``adaptiveFormats" field from the video webpage element must be accessed. This field provides the ``start" and ``end" values within the ``indexRange" field, which indicate the byte range of the index box where segment information is recorded in the container header. For MP4 files, the index box is called ``sidx", while for WebM files, it is called ``cues".
+- The "adaptiveFormats" field from the video webpage element must be accessed. This field provides the "start" and "end" values within the "indexRange" field, which indicate the byte range of the index box where segment information is recorded in the container header. For MP4 files, the index box is called "sidx", while for WebM files, it is called "cues".
  
 - By locating the box in the video or audio file, four sequences can be parsed: the video segment size sequence, the video segment timeline sequence, the audio segment size sequence, and the audio segment timeline sequence.
 
@@ -25,8 +26,9 @@ Our approach involves two steps: fingerprint fusion and fuzzy search. Fingerprin
 - Sorting the video segment and audio segment based on their respective timeline, and then align the end times of video segments with the start times of audio segments on the same timeline, as shown in Fig.\ref{fig:fusion}. This mapped time sequence is used to establish the order for fused fingerprints.
 
 - fused fingerprint needs to be converted into a prefix-sum sequence. Then Using scaling factors to obtain scaled prefixes and sequences and storing it in a hashmap. The implementation details of fuzzy search are shown in the following figure:
+![image](https://github.com/user-attachments/assets/94da3a0a-6635-41fb-9ca4-c9a527423124)
 
-![image](https://github.com/user-attachments/assets/86bbd3d6-6dbd-41f4-8b0a-371d73c085bc)
+
 
 
 ### The code organization for each section is as follows:
