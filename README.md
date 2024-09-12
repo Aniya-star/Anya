@@ -1,7 +1,8 @@
 
 # Unveiling the Unseen: A Novel Video Identification Attack on Media Multiplexing
 ### Attack process of Anya
-![image](https://github.com/user-attachments/files/16975125/intro2.pdf)
+
+![image](https://github.com/user-attachments/assets/3837be7c-0ef6-4170-8c8b-6d46cc800d54)
 
 
 #### Step1: Fingerprint Collection
@@ -24,7 +25,8 @@ Our approach involves two steps: fingerprint fusion and fuzzy search. Fingerprin
 - Sorting the video segment and audio segment based on their respective timeline, and then align the end times of video segments with the start times of audio segments on the same timeline, as shown in Fig.\ref{fig:fusion}. This mapped time sequence is used to establish the order for fused fingerprints.
 
 - fused fingerprint needs to be converted into a prefix-sum sequence. Then Using scaling factors to obtain scaled prefixes and sequences and storing it in a hashmap. The implementation details of fuzzy search are shown in the following figure:
-  ![image](https://github.com/user-attachments/files/16975320/match.pdf)
+
+![image](https://github.com/user-attachments/assets/86bbd3d6-6dbd-41f4-8b0a-371d73c085bc)
 
 
 ### The code organization for each section is as follows:
