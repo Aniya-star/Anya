@@ -26,7 +26,7 @@ Our approach involves two steps: fingerprint fusion and fuzzy search. Fingerprin
 - Sorting the video segment and audio segment based on their respective timeline, and then align the end times of video segments with the start times of audio segments on the same timeline, as shown in Fig.\ref{fig:fusion}. This mapped time sequence is used to establish the order for fused fingerprints.
 
 - fused fingerprint needs to be converted into a prefix-sum sequence. Then Using scaling factors to obtain scaled prefixes and sequences and storing it in a hashmap. The implementation details of fuzzy search are shown in the following figure:
-![image](https://github.com/user-attachments/assets/94da3a0a-6635-41fb-9ca4-c9a527423124)
+![image](https://github.com/user-attachments/assets/de41672a-6ede-4298-bf3f-6385fd6e0fc2)
 
 
 
